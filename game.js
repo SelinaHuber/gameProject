@@ -6,6 +6,11 @@ class Level {
         this.points= 100;
         this.cards = []
     }
+    getQuestions() {
+        Level.cards.map((question) => {
+            return question.question
+        })
+    }
 }
 
 class Card {
@@ -31,22 +36,44 @@ const level1 = new Level(1, 100, cardLevel1);
 const level2 = new Level(2, 200, cardLevel2);
 const level3 = new Level(3, 300, cardLevel3);
 
+/* function checkAvailability(array, question) {
+    return array.some(function(el) {
+      return el.question === question;
+    });
+} */
+
+/* console.log (cardLevel1[1].question) */
+
+
+/* function getQuestions (cardLevel) {
+    for (let i=0; i<cardLevel.length; i++) {
+        console.log (cardLevel[i].question)
+    }
+} */
+
 
 
 const playedCards = [];
 let questions = cardLevel1;
+
+// function to switch levels until all piles of decks are empty
 function setCardDeck () {
-    //console.log (cardLevel1)
-    let l1questions = cardLevel1.map(card => card.question);
-    let checkL1 = l1questions.every(question => playedCards.includes(question))
-    console.log(checkL1)
-    let checkLevel2 = cardLevel2.every(card => playedCards.includes(card.question));
-   // let checkLevel3 = cardLevel3.every(card => playedCards.includes(card.question));
-   // console.log('this is Level 1', checkLevel1, 'this is 2', checkLevel2)
-   // if (!checkLevel1) questions = cardLevel1;
-   // else if (checkLevel1) questions = cardLevel2;
-   // else if (checkLevel2) questions = cardLevel3;
-    //console.log(questions)
+  
+    if (cardLevel1.length < 1){
+        if (cardLevel2.length > 0) {
+            questions = cardLevel2;
+        } else {
+            if (cardLevel3.length > 0) {
+                 questions = cardLevel3;
+            } else {
+                alertGameOver()
+            }
+           
+        }
+    }
+        /*  console.log ('Level 1 length is', cardLevel1.length)
+        console.log ('Level 2 length is', cardLevel2.length)
+        console.log ('Level 3 length is', cardLevel3.length) */
 }
 
 
@@ -74,32 +101,26 @@ cardsContainer.addEventListener('click', playCard);
 
 function playCard() {
     setCardDeck()
-    let randomQuestion = questions[Math.floor(Math.random() * questions.length)];
-        if (!playedCards.includes(randomQuestion)) {
+    let randomIndex = Math.floor(Math.random() * questions.length);
+    let randomQuestion = questions[randomIndex];
+    // what happends if it is already there. Then I would have to click again
+    while (!playedCards.includes(randomQuestion)) {
         let questionDiv = document.getElementById('question');
         questionDiv.innerHTML = randomQuestion.question;
+        questions.splice(randomIndex, 1)
         playedCards.push(randomQuestion);
-        //console.log(playedCards)
     }
 }
 
-// check if array of playedCards contains all elements of questions and if that is true use questionsLevel2
-    /* function checkDecks(array, array2) {
-        return array.every(i => array2.includes(i));
-    } 
-    
-    if(checkDecks(cardLevel1, playedCards)===true){
-       questions = cardLevel2
-    }
-    
-    console.log (cardLevel1)
-    console.log (playedCards)
-    console.log (checkDecks(cardLevel1, playedCards))
- */
 
-/* function alertRefresh() {
-        alert('You have gone through all the cards. You have to restart the game.');
-} */
+
+// while (playedCards.every(randomQuestion)) {
+
+function alertGameOver() {
+    if(confirm('You have gone through all the cards. You have to restart the game.')){
+        window.location.reload();  
+    };
+} 
 
 
 
