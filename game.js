@@ -1,5 +1,41 @@
+import { questionsLevel1, questionsLevel2 } from "./questions.js";
 
-const questions = [
+class Level {
+    constructor () {
+        this.levelNumber= 1;
+        this.points= 100;
+        this.cards = []
+    }
+    startGame() {
+       return this.cards = questions.map(object => {
+            return new Card(object.question, object.questionsType)
+       }) 
+    }
+}
+
+class Card {
+    constructor (question, questionType) {
+        this.question=question;
+        this.questionType=questionType;
+        }   
+}
+
+const cardLevel1 = questionsLevel1.map((question) => {
+    return new Card(question.question, question.questionType)
+});
+
+const cardLevel2 = questionsLevel2.map((question) => {
+    return new Card(question.question, question.questionType)
+});
+
+const level1 = new Level(1, 100, cardLevel1);
+const level2 = new Level(2, 200, cardLevel2);
+// level1.cards
+
+const questions = cardLevel1;
+console.log("Hier Selina hi");
+console.log(questionsLevel1);
+/*[
                     {question: 'what is something new you have learned recently?',
                     questionsType:'open question'
                     },
@@ -21,27 +57,7 @@ const questions = [
                     {question:'What has been the kindest thing someone has done for you?',
                     questionsType:'open question'
                     }
-                ]
-
-class Level {
-    constructor () {
-        this.levelNumber= 1;
-        this.points= 100;
-        this.cards = []
-    }
-    startGame() {
-       return this.cards = questions.map(object => {
-            return new Card(object.question, object.questionsType)
-       }) 
-    }
-}
-
-class Card {
-    constructor (question, questionType) {
-        this.question=question;
-        this.questionType=questionType;
-        }   
-}
+                ]*/
 
 /* 
 
@@ -80,6 +96,7 @@ const randomIndex = Math.floor(Math.random() * listKeys.length);
 randomObject = questions[listKeys[randomIndex]]; */
 
 
+// shuffle the card game
 function shuffleArray(array) {
     if (array.length > 0) {
         for (let i=0; i < array.length; i++) {
@@ -96,28 +113,38 @@ function shuffleArray(array) {
 }
 
 
-console.log (shuffleArray(questions).question)
+//console.log (shuffleArray(questions).question)
 
 
-
+// 
 
 let cardsContainer = document.getElementsByClassName('cards-container')[0].children[0]
 
-function saveUsedCards(array){
+/* function saveUsedCards(array){
     for (let i=0; i < array.length; i++) {
         let arrayUsedCards = [];
         arrayUsedCards.push([i]);
         // add code here to add a score
     }
 }
+ */
+
 
 // shuffles through the array and removes the fist element
 cardsContainer.onclick = function() {
     let questionDiv = document.getElementById('question');
-    let randomQuestion = shuffleArray(questions).question;
-    questionDiv.innerHTML = randomQuestion;
-    return questions.shift();
+    questionDiv.innerHTML = playCard().question;
 }; 
+
+const playedCards = [];
+function playCard() {
+    let randomQuestion = questions[Math.floor(Math.random() * questions.length)];
+    while (playedCards.includes(randomQuestion)) {
+        randomQuestion = questions[Math.floor(Math.random() * questions.length)];
+    }
+    playedCards.push(randomQuestion);
+    return randomQuestion
+}
 
 
 function alertRefresh() {
