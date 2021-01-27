@@ -19,6 +19,7 @@ function alertGameOver() {
     };
 } 
 
+// Random Questions is picked out and is displayed on card, with each click, a score is added
 function playCard() {
     const randomIndex = Math.floor(Math.random() * questions.length);
     let randomQuestion = questions[randomIndex];
@@ -28,25 +29,27 @@ function playCard() {
     checkWildCard(randomQuestion);
     addScore();
     underlineCurrentLevel()
-    console.log (level.cards.length)
-    //console.log("The Score is", score, "The Level is", level.level, "for the level", level.points)
-    // console.log (level.cards.length)
-    if (questions.length === 0) win();
+    //console.log("The Score is", score, "The Level is", level.level, "and the length", questions.length)
+       if (questions.length === 0) win();
     
 }
-/* 
-function checkWildCard (){
-    if (level.cards[randomIndex].type === 'wild card') {
-        console.log ('true')
-    } else {
-        console.log ('false')
-    }
-} */
 
+// Score 
 function addScore() {
     score += level.points;
     let scoreDiv = document.getElementById('score');
     scoreDiv.innerText = `Connection Score : ${score}`
+    }
+
+// skip card function
+
+const skipCardBtn = document.querySelector('.myButton');
+skipCardBtn.addEventListener('click', nextQuestonNoScore);
+function nextQuestonNoScore (){
+    const randomIndex = Math.floor(Math.random() * questions.length);
+    let randomQuestion = questions[randomIndex];
+    let questionContainer = document.getElementById('question');
+    questionContainer.innerHTML = randomQuestion;
 }
 
 function win() {
@@ -69,8 +72,6 @@ const btnLevThree = document.querySelector(".btnThree")
 
 const allBtns = [btnLevOne, btnLevTwo, btnLevThree]
 
-
-
 function underlineCurrentLevel() {
     if (level.level === 1) {
          allBtns.forEach((btn) => {
@@ -90,19 +91,23 @@ function underlineCurrentLevel() {
        btnLevThree.classList.add('underline')
     }
 }
+// colour wildcards
 
 function checkWildCard (element){
-    if (level.level ===3 && questions.length < 1 ) {
+    if (questions.length > 0) {
         if (!element.includes('?')) {
             colorWildCard()
         } else {
             uncolourWildCard ()
         }
-    } 
+    } else if (level.level === 3 && questions.length === 0){
+        alertGameOver();
+    }
 }  
+
   //if (questionsLevel3.length < 2) alertGameOver()
 
-
+  
 const cardContainer = document.querySelector('.card')
 const cardText = document.querySelector('.card p')
 const h2Text = document.querySelector('h2')
@@ -111,14 +116,20 @@ function colorWildCard() {
     cardContainer.classList.add("colouredCard");
     cardText.classList.add("colouredText");
     h2Text.classList.add('colouredTitle')
+    h2Text.innerText = 'wild card'
 }
 
 function uncolourWildCard(){
     cardContainer.classList.remove("colouredCard");
     cardText.classList.remove("colouredText");
     h2Text.classList.remove('colouredTitle')
+    h2Text.innerText = 'We are not really strangers!'
 }
 
-
-
+// start Screen
+const startGameBtn = document.querySelector('.StartBtn');
+const startContainer = document.querySelector('.imgContainer')
+startGameBtn.addEventListener('click', function (){
+    startContainer.style.visibility = "hidden";
+})
 

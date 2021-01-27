@@ -6,6 +6,16 @@
   font-style: normal;
 } */
 
+@font-face {
+  font-family: 'Springwood Line DEMO';
+  src: url('SpringwoodLineDEMO-Regular.woff2') format('woff2'),
+      url('SpringwoodLineDEMO-Regular.woff') format('woff'),
+      url('SpringwoodLineDEMO-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 .cards-container {
     height: 450px;
     display:flex;
@@ -20,10 +30,13 @@
      height: 300px;
      background-color: #FFFBF7;
      border: 1px solid #E6E3E0;
-     box-shadow: 8px 8px 2px 0px rgba(158, 147, 147, 0.089);
+     box-shadow: 4px 4px 2px 0px rgba(158, 147, 147, 0.344);
      box-sizing: border-box;
      padding: 40px;
      border-radius: 25px;
+     display: flex;
+     justify-content: center;
+     text-align:center;
 }
 
 p {
@@ -40,10 +53,14 @@ p {
 
 h2 {
 font-family:'Montserrat', sans-serif;
-font-size: 15px;
+font-size: 13px;
 text-transform: uppercase;
 color: #C10016;
+position: absolute;
+bottom: 15px;
 text-align: center;
+
+
 }
 
 h1
@@ -139,3 +156,55 @@ h1
 .colouredTitle {
   color: white;
 }
+
+.img {
+  width: 550px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: 30px;
+  transform: translate(-50%, -50%);
+}
+
+.imgContainer p{
+  width: 280px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:black;
+    text-align:center;
+  line-height:220%;
+  font-size: 12px;
+  
+}
+
+.imgContainer h3{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:#C10016;
+  text-transform: lowercase;
+}
+
+.imgContainer h4{
+  position: absolute;
+  top: 67%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:#C10016;
+  text-transform: lowercase;
+  font-size: 20px;
+ }
+
+ .StartBtn {
+  position: absolute;
+  top: 82%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:#C10016;
+  text-transform: lowercase;
+ }
+ }
+
