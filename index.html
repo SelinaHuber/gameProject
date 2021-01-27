@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
     <title>We are not really strangers</title>
@@ -12,26 +12,27 @@
 <body>
     <div class = navBarLevels>
     <ul class="tabs-controls">
-        <li class="tabs-controls__item">
-            <a href="#" class="tabs-controls__link tabs-controls__link--active" data-id="1">
+        <li class="tabs-controls__item btnOne">
+            <a href="#" class="tabs-controls__link" >
                 Level 1
             </a>
         </li>
-        <li class="tabs-controls__item">
-            <a href="#" class="tabs-controls__link" data-id="2">
+        <li class="tabs-controls__item btnTwo">
+            <a href="#" class="tabs-controls__link" >
                 Level 2
           </a>
         </li>
-        <li class="tabs-controls__item">
-            <a href="#" class="tabs-controls__link" data-id="3">
+        <li class="tabs-controls__item btnThree">
+            <a href="#" class="tabs-controls__link" >
                 Level 3
             </a>
         </li>
+    </ul>
     </div>
     <section class = game>
         <div id=score>Connection Score: 0 </div>
         <section class="cards-container">
-            <div class="card currentcard">
+            <div class="card">
                 <p id=question></p>
                 <h2>We are not really strangers!</h2>
             </div>

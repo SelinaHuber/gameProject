@@ -1,5 +1,13 @@
+/* @font-face {
+  font-family: 'Nimbus Sans L';
+  src: url('NimbusSanL-Reg.woff') format('woff'),
+      url('NimbusSanL-Reg.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+} */
+
 .cards-container {
-      height: calc(60vh - 205px);
+    height: 450px;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -7,7 +15,7 @@
 
  
 .card {
-    position: absolute;
+    position: relative;
      width: 500px;
      height: 300px;
      background-color: #FFFBF7;
@@ -19,7 +27,7 @@
 }
 
 p {
-    position: relative;
+  position: relative;
   display: block;
   padding: 16px 32px;
   font-size: 20px;
@@ -31,7 +39,7 @@ p {
 }
 
 h2 {
-font-family: 'Montserrat', sans-serif;
+font-family:'Montserrat', sans-serif;
 font-size: 15px;
 text-transform: uppercase;
 color: #C10016;
@@ -47,20 +55,6 @@ h1
   font-weight:800px;
 }
 
-.tabs-controls {
-  position: relative;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  box-sizing: border-box;
-  padding: 50px 0 100px;
-  list-style-type: none;
-}
-
 #score {
   position:relative;
   font-family: 'Montserrat', sans-serif;
@@ -70,8 +64,8 @@ h1
   font-weight:800px;
   margin-bottom: 0px;
   display: flex;
-  justify-content: flex-end;
-  margin-right: 1025px;
+  justify-content: center;
+  margin-right:0 px;
 }
 
 .myButton {
@@ -101,3 +95,47 @@ h1
   align-items: flex-end;  
 }
 
+.tabs-controls {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 50px 0 100px;
+  list-style-type: none;
+}
+
+.tabs-controls__link {
+  
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  display: block;
+  padding: 16px 32px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #C10016;
+  text-transform: uppercase;
+  text-decoration:none;
+ }
+
+ .underline {
+  border-bottom: 2px solid currentColor;
+  color: #C10016;
+}
+
+.colouredCard {
+  background-color: #C10016;
+  border: 1px solid#C10016;
+}
+
+.colouredText {
+  color: white;
+}
+
+.colouredTitle {
+  color: white;
+}
