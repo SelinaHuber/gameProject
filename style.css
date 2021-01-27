@@ -1,10 +1,22 @@
+
+@font-face {
+    font-family: 'helveticaregular';
+    src: url('helvetica_4001-webfont.woff2') format('woff2'),
+         url('helvetica_4001-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 .cards-container {
     position: relative;
-    width: 500px;
-    height: calc(100vh - 205px);
-    margin: 0 auto;
+    height: calc(60vh - 205px);
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
   }
 
+ 
 
 .card {
     position: absolute;
@@ -24,7 +36,7 @@ p {
   padding: 16px 32px;
   font-size: 20px;
   font-weight: 700;
-  color: red;
+  color: #C10016;
   text-transform: uppercase;
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
@@ -34,28 +46,69 @@ h2 {
 font-family: 'Montserrat', sans-serif;
 font-size: 15px;
 text-transform: uppercase;
-color: red;
+color: #C10016;
 text-align: center;
 }
 
 h1
 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
+  font-size: 20px;
   text-transform: uppercase;
-  color: red;
+  color: #C10016;
   font-weight:800px;
+}
+
+.tabs-controls {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 50px 0 100px;
+  list-style-type: none;
 }
 
 #score {
- 
-  font-family: 'Montserrat', sans-serif;
+   font-family: 'Montserrat', sans-serif;
   font-size: 20;
   text-transform: uppercase;
-  color: red;
+  color: ##C10016;
   font-weight:800px;
-  margin-left: 350px;
-  margin-bottom: 20px;
-  margin-top: 250px;
+  display: flex;
+  display:flex;
+  justify-content: flex-end;
+  margin-bottom: 50px;
 }
 
+.myButton {
+	background-color:#C10016;
+	border-radius:11px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	font-weight:bold;
+	padding:16px 38px;
+	text-decoration:none;
+}
+.myButton:hover {
+	background-color:rgba(137, 17, 17, 0.843);
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.rightSide {
+  display: flex;
+  direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+    
+}
