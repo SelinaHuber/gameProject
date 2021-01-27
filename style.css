@@ -1,23 +1,11 @@
-
-@font-face {
-    font-family: 'helveticaregular';
-    src: url('helvetica_4001-webfont.woff2') format('woff2'),
-         url('helvetica_4001-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
 .cards-container {
-    position: relative;
-    height: calc(60vh - 205px);
+      height: calc(60vh - 205px);
     display:flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
   }
 
  
-
 .card {
     position: absolute;
      width: 500px;
@@ -74,15 +62,16 @@ h1
 }
 
 #score {
-   font-family: 'Montserrat', sans-serif;
+  position:relative;
+  font-family: 'Montserrat', sans-serif;
   font-size: 20;
   text-transform: uppercase;
-  color: ##C10016;
+  color: #C10016;
   font-weight:800px;
+  margin-bottom: 0px;
   display: flex;
-  display:flex;
   justify-content: flex-end;
-  margin-bottom: 50px;
+  margin-right: 1025px;
 }
 
 .myButton {
@@ -91,7 +80,7 @@ h1
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:Arial;
+	font-family: "Montserrat", sans-serif;
 	font-size:16px;
 	font-weight:bold;
 	padding:16px 38px;
@@ -105,10 +94,10 @@ h1
 	top:1px;
 }
 
-.rightSide {
+.btn {
   display: flex;
   direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-    
+  justify-content: center;
+  align-items: flex-end;  
 }
+

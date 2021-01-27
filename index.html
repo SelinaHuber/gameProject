@@ -10,37 +10,38 @@
 </head>
 <h1>We are not really strangers</h1>
 <body>
+    <div class = navBarLevels>
     <ul class="tabs-controls">
         <li class="tabs-controls__item">
             <a href="#" class="tabs-controls__link tabs-controls__link--active" data-id="1">
-                Tab A
+                Level 1
             </a>
         </li>
         <li class="tabs-controls__item">
             <a href="#" class="tabs-controls__link" data-id="2">
-                Tab B
+                Level 2
           </a>
         </li>
         <li class="tabs-controls__item">
             <a href="#" class="tabs-controls__link" data-id="3">
-                Tab C
+                Level 3
             </a>
         </li>
-        </section>
-    <div class=rightSide></div>
+    </div>
+    <section class = game>
         <div id=score>Connection Score: 0 </div>
         <section class="cards-container">
             <div class="card currentcard">
                 <p id=question></p>
-                <h2>We are not really strangers</h2>
-        </div>
+                <h2>We are not really strangers!</h2>
+            </div>
         </section>
         <div class= btn>
         <a href="#" class="myButton">skip card</a>
         </div>
-    </div>
-    <script type="module" src="questions.js"></script>
-    <script type="module" src="game.js"></script>
-    <script src="main.js"></script>
+    </section>
+    <script type="module" src="./questions.js"></script>
+    <script type="module" src="./Level.js"></script>  
+    <script type="module" src="./game.js"></script>
 </body>
 </html>
