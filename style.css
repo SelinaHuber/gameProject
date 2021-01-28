@@ -48,15 +48,13 @@ p {
 }
 
 h2 {
-font-family:'Montserrat', sans-serif;
-font-size: 13px;
-text-transform: uppercase;
-color: #C10016;
-position: absolute;
-bottom: 15px;
-text-align: center;
-
-
+  font-family:'Montserrat', sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #C10016;
+  position: absolute;
+  bottom: 15px;
+  text-align: center;
 }
 
 h1
@@ -72,6 +70,7 @@ h1
   position:relative;
   font-family: 'Montserrat', sans-serif;
   font-size: 20;
+  font-weight: 700;
   text-transform: uppercase;
   color: #C10016;
   font-weight:800px;
@@ -234,7 +233,7 @@ h1
 } 
 
 .imgContainer h3{
-  top: 19%;
+  top: 11%;
   line-height:150%;
   letter-spacing: 1px;
 }
@@ -278,8 +277,9 @@ h1 {
   padding: 20px 0 20px;
 }
 
-.game {
- 
+.StartBtn {
+  top: 90%;
 }
+
 }
  

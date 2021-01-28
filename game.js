@@ -14,7 +14,7 @@ function setUp() {
 
 
 function alertGameOver() {
-    if(confirm('You have gone through all the cards. You have to restart the game.')){
+    if(confirm(`Congratulations. You both reached the end of the game. You achieved a connection score of ${score}! See you next time.`)){
         window.location.reload();  
     };
 } 
