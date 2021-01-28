@@ -6,16 +6,9 @@
   font-style: normal;
 } */
 
-@font-face {
-  font-family: 'Springwood Line DEMO';
-  src: url('SpringwoodLineDEMO-Regular.woff2') format('woff2'),
-      url('SpringwoodLineDEMO-Regular.woff') format('woff'),
-      url('SpringwoodLineDEMO-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+html{
+  font-family: 'Lato', sans-serif;
 }
-
 .cards-container {
     height: 450px;
     display:flex;
@@ -37,7 +30,8 @@
      display: flex;
      justify-content: center;
      text-align:center;
-}
+     background-image: url("https://img.freepik.com/fotos-kostenlos/grunge-wand-textur_1194-5384.jpg?size=626&ext=jpg");
+  }
 
 p {
   position: relative;
@@ -91,10 +85,9 @@ h1
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family: "Montserrat", sans-serif;
-	font-size:16px;
-	font-weight:bold;
-	padding:16px 38px;
+  font-size:12px;
+  text-transform: uppercase;
+	padding:14px 35px;
 	text-decoration:none;
 }
 .myButton:hover {
@@ -124,6 +117,7 @@ h1
   box-sizing: border-box;
   padding: 50px 0 100px;
   list-style-type: none;
+  
 }
 
 .tabs-controls__link {
@@ -134,9 +128,10 @@ h1
   padding: 16px 32px;
   font-size: 20px;
   font-weight: 700;
-  color: #C10016;
+  color: white;
   text-transform: uppercase;
   text-decoration:none;
+  color: #C10016;
  }
 
  .underline {
@@ -146,7 +141,8 @@ h1
 
 .colouredCard {
   background-color: #C10016;
-  border: 1px solid#C10016;
+  background-image: none;
+   ;
 }
 
 .colouredText {
@@ -159,52 +155,57 @@ h1
 
 .img {
   width: 550px;
+  height: 690px;
   position: absolute;
   left: 50%;
   top: 50%;
   margin-top: 30px;
   transform: translate(-50%, -50%);
+  opacity: 0.6;
 }
 
 .imgContainer p{
-  width: 280px;
+  width: 300px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color:black;
-    text-align:center;
+  text-align:center;
   line-height:220%;
-  font-size: 12px;
-  
+  font-size: 16px;
+  font-family:'Reenie Beanie';
+      
 }
 
 .imgContainer h3{
   position: absolute;
-  top: 30%;
+  top: 26%;
   left: 50%;
   transform: translate(-50%, -50%);
   color:#C10016;
-  text-transform: lowercase;
+  text-transform: uppercase;
+  font-family:'Reenie Beanie';
+  line-height:200%;
 }
-
-.imgContainer h4{
-  position: absolute;
-  top: 67%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color:#C10016;
-  text-transform: lowercase;
-  font-size: 20px;
- }
 
  .StartBtn {
   position: absolute;
-  top: 82%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   color:#C10016;
-  text-transform: lowercase;
+  text-transform: upperrcase;
  }
+ 
+ #backgroundWhite {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  background:white;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
  }
 
+ 

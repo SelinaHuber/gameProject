@@ -57,13 +57,20 @@ function win() {
     setUp()
 }
 
-// set up event listeners after loading the page
+// set up event listeners after loading the page and pressing arrow key
 window.addEventListener('load', function () {
     setUp()
     let cardContainer = document.getElementsByClassName('cards-container')[0].children[0]
     cardContainer.addEventListener('click', playCard);
-
 })
+
+document.addEventListener('keydown', function(e) {
+    switch (e.keyCode) {
+        case 39:
+            playCard();
+            break;
+    }
+});
 
 // underline current Level 
 const btnLevOne = document.querySelector(".btnOne")
@@ -129,7 +136,13 @@ function uncolourWildCard(){
 // start Screen
 const startGameBtn = document.querySelector('.StartBtn');
 const startContainer = document.querySelector('.imgContainer')
+const levelTab = document.querySelector('.navBarLevels');
 startGameBtn.addEventListener('click', function (){
-    startContainer.style.visibility = "hidden";
+startContainer.style.visibility = "hidden";
+levelTab.style.visibility = "visible";
+})
+
+window.addEventListener("load", function() {
+    levelTab.style.visibility = "hidden";
 })
 
