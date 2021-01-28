@@ -137,6 +137,7 @@ function uncolourWildCard(){
 const startGameBtn = document.querySelector('.StartBtn');
 const startContainer = document.querySelector('.imgContainer')
 const levelTab = document.querySelector('.navBarLevels');
+const skipBtn = document.querySelector('.StartBtn');
 startGameBtn.addEventListener('click', function (){
 startContainer.style.visibility = "hidden";
 levelTab.style.visibility = "visible";

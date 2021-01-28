@@ -7,7 +7,7 @@
 } */
 
 html{
-  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 .cards-container {
     height: 450px;
@@ -150,6 +150,7 @@ h1
 
 .colouredText {
   color: white;
+  font-weight:700;
 }
 
 .colouredTitle {
@@ -213,4 +214,72 @@ h1
   margin: 0 auto;
  }
 
+
+ @media (min-width: 300px) and (max-width: 850px) {
+ .imgContainer {
+    margin: auto;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    text-align: center;
+ } 
+
+ .img {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  display:flex;
+  justify-content: center;
+  text-align: center;
+} 
+
+.imgContainer h3{
+  top: 19%;
+  line-height:150%;
+  letter-spacing: 1px;
+}
+
+.tabs-controls__link {
+    font-size: 13px;
+ }
+.navBarLevels {
+  margin-top: 0vh;
+  height: 2em;
+}
+
+#score {
+  margin-top:15vh;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+p {
+  position: relative;
+  display: block;
+  padding: 10px 8px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height:140%;
+}
+.card {
+  height: 250px;
+  }
+
+.cards-container {
+  height:60vh;
+}
+
+h1 {
+  font-size: 10px;
+  margin-bottom: 0px;
+}
+
+.tabs-controls {
+  padding: 20px 0 20px;
+}
+
+.game {
+ 
+}
+}
  
