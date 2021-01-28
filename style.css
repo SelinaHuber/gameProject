@@ -239,7 +239,7 @@ h1
 }
 
 .tabs-controls__link {
-    font-size: 10px;
+    font-size: 12px;
  }
 
 .navBarLevels {
@@ -259,7 +259,7 @@ p {
   padding: 10px 8px;
   font-size: 13px;
   font-weight: 700;
-  line-height:140%;
+  line-height:100%;
 }
 .card {
   height: 33vh;
@@ -272,6 +272,10 @@ p {
 h1 {
   font-size: 12px;
   margin-bottom: 0px;
+}
+
+h2 {
+  font-size:9px;
 }
 
 .tabs-controls {
